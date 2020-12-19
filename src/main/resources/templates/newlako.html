@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Új Lakó</title>
+</head>
+<body>
+<div>
+    <div>
+        <h1>Uj Lakó Adatai</h1>
+    </div>
+    <form th:action="@{/load}" th:object="${lakok}"
+          method="post">
+        <div>
+            <div>
+                <label>Neve: </label>
+                <div>
+                    <input type="text" th:field="*{nev}"/>
+                </div>
+            </div>
+
+            <div>
+                <label>Emelet: </label>
+                <div>
+                    <input type="text" th:field="*{emelet}"/>
+                </div>
+            </div>
+
+            <div>
+                <label>Szoba: </label>
+                <div>
+                    <input type="text" th:field="*{szoba}"/>
+                </div>
+            </div>
+            <div>
+                <button type="submit">Sign Up</button>
+            </div>
+        </div>
+    </form>
+
+</div>
+</body>
+</html>

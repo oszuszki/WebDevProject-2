@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Minden lako</title>
+</head>
+<body>
+
+<div>
+    <table>
+        <thead>
+        <tr>
+            <th>Nev</th>
+            <th>Emelet</th>
+            <th>Szoba</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="all: ${mindenlako}">
+            <td th:text="${all.nev}">Nev</td>
+            <td th:text="${all.emelet}">Emelet</td>
+            <td th:text="${all.szoba}">Szoba</td>
+            <td >
+                <a th:href="@{delete/__${all.id}__}">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
